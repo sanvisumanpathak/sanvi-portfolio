@@ -1,0 +1,1420 @@
+
+/* ==========================================
+   01. COLOUR PALETTE
+   ========================================== */
+
+:root {
+
+    --black: #000000;
+    --navy: #14213D;
+    --orange: #FCA311;
+    --platinum: #E5E5E5;
+    --white: #FFFFFF;
+
+    --border: rgba(229, 229, 229, 0.17);
+
+    --font-primary: 'Inter', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+}
+
+
+/* ==========================================
+   02. GLOBAL SETTINGS
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: var(--black);
+
+    color: var(--white);
+
+    font-family: var(--font-primary);
+
+    line-height: 1.75;
+
+}
+
+a {
+
+    color: var(--orange);
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+a:hover {
+    color: var(--white);
+}
+
+:focus-visible {
+
+    outline: 2px solid var(--orange);
+
+    outline-offset: 4px;
+
+}
+
+::selection {
+
+    background-color: var(--orange);
+
+    color: var(--black);
+
+}
+
+
+/* ==========================================
+   03. NAVIGATION
+   ========================================== */
+
+.navbar {
+
+    background-color: rgba(0, 0, 0, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 14px 0;
+
+}
+
+.navbar-brand {
+
+    color: var(--orange);
+
+    font-weight: 800;
+
+    font-size: 26px;
+
+    letter-spacing: 2px;
+
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+
+    color: var(--white);
+
+}
+
+.nav-link {
+
+    color: var(--platinum);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin-left: 14px;
+
+}
+
+.nav-link:hover,
+.nav-link:focus {
+
+    color: var(--orange);
+
+}
+
+.navbar-toggler {
+
+    border-color: var(--border);
+
+}
+
+
+/* ==========================================
+   04. GENERAL SECTIONS
+   ========================================== */
+
+section {
+
+    padding: 90px 0;
+
+    scroll-margin-top: 80px;
+
+}
+
+section.navy {
+
+    background-color: var(--navy);
+
+}
+
+section h2 {
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 28px;
+
+}
+
+section h2 span,
+h1 span {
+
+    color: var(--orange);
+
+}
+
+section p {
+
+    color: var(--platinum);
+
+}
+
+section .section-label {
+
+    color: var(--orange);
+
+    font-family: var(--font-mono);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 16px;
+
+}
+
+.section-description {
+
+    max-width: 750px;
+
+    font-size: 16px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ==========================================
+   05. HOMEPAGE
+   ========================================== */
+
+#home {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--black),
+        var(--navy)
+    );
+
+}
+
+#home h1 {
+
+    font-size: clamp(38px, 4.6vw, 68px);
+
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+
+}
+
+#home h2 {
+
+    color: var(--orange);
+
+    font-size: clamp(22px, 2.5vw, 32px);
+
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+
+}
+
+.hero-description {
+
+    font-size: 17px;
+
+    max-width: 650px;
+
+}
+
+
+/* ==========================================
+   06. BUTTONS
+   ========================================== */
+
+.btn {
+
+    padding: 12px 22px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 7px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+.btn-primary {
+
+    --bs-btn-color: #000000;
+    --bs-btn-bg: #FCA311;
+    --bs-btn-border-color: #FCA311;
+
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #ffb535;
+    --bs-btn-hover-border-color: #ffb535;
+
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #e59100;
+    --bs-btn-active-border-color: #e59100;
+
+    --bs-btn-focus-shadow-rgb: 252, 163, 17;
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.btn-outline-light {
+
+    --bs-btn-color: #FCA311;
+    --bs-btn-border-color: #FCA311;
+
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #FCA311;
+    --bs-btn-hover-border-color: #FCA311;
+
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #FCA311;
+    --bs-btn-active-border-color: #FCA311;
+
+}
+
+
+/* ==========================================
+   07. TECHNOLOGY BADGES
+   ========================================== */
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+.tags span {
+
+    border: 1px solid rgba(252, 163, 17, 0.35);
+
+    background-color: rgba(252, 163, 17, 0.07);
+
+    color: var(--orange);
+
+    font-family: var(--font-mono);
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    overflow-wrap: anywhere;
+
+    transition: background-color 0.3s ease;
+
+}
+
+.tags span:hover {
+
+    background-color: rgba(252, 163, 17, 0.15);
+
+}
+
+
+/* ==========================================
+   08. SOCIAL LINKS
+   ========================================== */
+
+.social-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+.social-links a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--platinum);
+
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+
+}
+
+.social-links a:hover {
+
+    color: var(--orange);
+
+    border-color: var(--orange);
+
+    background-color: rgba(252, 163, 17, 0.08);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==========================================
+   09. PYTHON TERMINAL
+   ========================================== */
+
+.terminal {
+
+    background-color: var(--black);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+}
+
+.terminal-header,
+.terminal-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: var(--navy);
+
+    padding: 14px 18px;
+
+    font-family: var(--font-mono);
+
+    font-size: 12px;
+
+    color: var(--platinum);
+
+}
+
+.terminal-header {
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.terminal-footer {
+
+    border-top: 1px solid var(--border);
+
+    font-size: 11px;
+
+}
+
+.terminal-header button {
+
+    background: none;
+
+    border: none;
+
+    color: var(--orange);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+.terminal-header button:hover {
+
+    color: var(--white);
+
+}
+
+.dots {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+.dots i {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background-color: #ff605c;
+
+}
+
+.dots i:nth-child(2) {
+
+    background-color: #ffbd44;
+
+}
+
+.dots i:nth-child(3) {
+
+    background-color: #00ca4e;
+
+}
+
+.terminal pre {
+
+    margin: 0;
+
+    padding: 24px;
+
+    min-height: 410px;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+
+    color: var(--platinum);
+
+    font-family: var(--font-mono);
+
+    font-size: clamp(11px, 1vw, 13px);
+
+    line-height: 1.8;
+
+}
+
+.terminal code {
+
+    color: inherit;
+
+    font: inherit;
+
+}
+
+
+/* ==========================================
+   10. SYNTAX HIGHLIGHTING
+   ========================================== */
+
+.keyword {
+
+    color: var(--orange);
+
+    font-weight: 600;
+
+}
+
+.comment {
+
+    color: #999999;
+
+}
+
+.string {
+
+    color: var(--platinum);
+
+}
+
+.function {
+
+    color: var(--orange);
+
+}
+
+.cursor {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 15px;
+
+    background-color: var(--orange);
+
+    vertical-align: middle;
+
+    animation: blink 1s step-end infinite;
+
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* ==========================================
+   11. REUSABLE CARDS
+   ========================================== */
+
+.panel,
+.highlight-card {
+
+    background-color: var(--navy);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 26px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.navy .panel,
+.highlight-card {
+
+    background-color: rgba(0, 0, 0, 0.32);
+
+}
+
+.panel:hover,
+.highlight-card:hover {
+
+    border-color: var(--orange);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(252, 163, 17, 0.07);
+
+}
+
+.panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+}
+
+.panel h3 {
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    margin-bottom: 14px;
+
+}
+
+.panel p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+.panel .tags {
+
+    margin-top: auto;
+
+    padding-top: 12px;
+
+}
+
+.panel .bi,
+.highlight-card .bi {
+
+    color: var(--orange);
+
+}
+
+.panel .panel-icon {
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ==========================================
+   12. ABOUT ME
+   ========================================== */
+
+.about-description {
+
+    max-width: 700px;
+
+}
+
+.about-description p {
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+
+}
+
+.highlight-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 14px;
+
+}
+
+.highlight-card i {
+
+    font-size: 27px;
+
+    flex-shrink: 0;
+
+}
+
+.highlight-card h3 {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+}
+
+.highlight-card p {
+
+    font-size: 13px;
+
+    margin: 0;
+
+}
+
+
+/* ==========================================
+   13. PROJECT FILTERS
+   ========================================== */
+
+.filter {
+
+    font-size: 13px;
+
+    padding: 9px 17px;
+
+}
+
+.filter[aria-pressed="true"] {
+
+    background-color: var(--orange);
+
+    color: var(--black);
+
+    border-color: var(--orange);
+
+}
+
+#project-count {
+
+    font-family: var(--font-mono);
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+}
+
+
+/* ==========================================
+   14. PROJECT CARDS
+   ========================================== */
+
+.project-category {
+
+    font-family: var(--font-mono);
+
+    font-size: 11px !important;
+
+    color: var(--orange) !important;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+}
+
+.project-action {
+
+    align-self: flex-start;
+
+    margin-top: 22px;
+
+    font-size: 13px;
+
+}
+
+.project-action:hover .bi {
+
+    color: var(--black);
+
+}
+
+
+/* ==========================================
+   15. EXPERIENCE TIMELINE
+   ========================================== */
+
+.timeline {
+
+    border-left: 2px solid
+        rgba(252, 163, 17, 0.4);
+
+    padding-left: 30px;
+
+    margin-top: 40px;
+
+    margin-left: 8px;
+
+    max-width: 1100px;
+
+}
+
+.timeline article {
+
+    position: relative;
+
+    height: auto;
+
+    margin-bottom: 28px;
+
+}
+
+.timeline article:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.timeline article::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -40px;
+
+    top: 28px;
+
+    width: 16px;
+
+    height: 16px;
+
+    background-color: var(--orange);
+
+    border: 3px solid var(--navy);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 3px
+        rgba(252, 163, 17, 0.15);
+
+}
+
+.timeline .date {
+
+    font-family: var(--font-mono);
+
+    font-size: 13px;
+
+    color: var(--orange);
+
+    margin-bottom: 14px;
+
+}
+
+.timeline h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+
+}
+
+.timeline h4 {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color: var(--platinum);
+
+    margin-bottom: 20px;
+
+}
+
+.timeline ul {
+
+    padding-left: 20px;
+
+    margin-bottom: 15px;
+
+}
+
+.timeline li {
+
+    color: var(--platinum);
+
+    font-size: 14px;
+
+    margin-bottom: 9px;
+
+}
+
+.timeline li::marker {
+
+    color: var(--orange);
+
+}
+
+
+/* ==========================================
+   16. TECHNICAL SKILLS
+   ========================================== */
+
+#skills .panel-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: 1px solid
+        rgba(252, 163, 17, 0.2);
+
+    background-color:
+        rgba(252, 163, 17, 0.08);
+
+    border-radius: 10px;
+
+    font-size: 25px;
+
+}
+
+#skills .panel h3 {
+
+    font-size: 19px;
+
+}
+
+
+/* ==========================================
+   17. EDUCATION
+   ========================================== */
+
+.education-date {
+
+    color: var(--orange) !important;
+
+    font-family: var(--font-mono);
+
+    font-size: 13px !important;
+
+}
+
+.education-achievements {
+
+    margin-top: auto;
+
+    padding-top: 15px;
+
+}
+
+.education-achievement {
+
+    background-color:
+        rgba(252, 163, 17, 0.07);
+
+    border-left: 3px solid var(--orange);
+
+    padding: 12px 15px;
+
+    margin-bottom: 10px;
+
+    color: var(--platinum);
+
+    font-size: 13px;
+
+}
+
+#education .panel .tags {
+
+    margin-top: 0;
+
+    padding-top: 8px;
+
+}
+
+
+/* ==========================================
+   18. CONTACT SECTION
+   ========================================== */
+
+#contact {
+
+    padding: 110px 0;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(20, 33, 61, 0.45),
+        var(--black) 75%
+    );
+
+}
+
+.contact-description {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+}
+
+#contact-links .btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 155px;
+
+    padding: 14px 24px;
+
+}
+
+#contact-links .bi {
+
+    font-size: 17px;
+
+}
+
+.contact-email {
+
+    font-family: var(--font-mono);
+
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
+
+}
+
+.contact-email i {
+
+    color: var(--orange);
+
+    margin-right: 6px;
+
+}
+
+.contact-email a {
+
+    color: var(--platinum);
+
+}
+
+.contact-email a:hover {
+
+    color: var(--orange);
+
+}
+
+.contact-location {
+
+    font-size: 13px;
+
+    opacity: 0.8;
+
+}
+
+.contact-location i {
+
+    color: var(--orange);
+
+    margin-right: 5px;
+
+}
+
+
+/* ==========================================
+   19. PROJECT DETAILS MODAL
+   ========================================== */
+
+.modal-content {
+
+    background-color: var(--navy);
+
+    color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+}
+
+.modal-header {
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 24px;
+
+}
+
+.modal-body {
+
+    padding: 28px;
+
+}
+
+.modal-body h3 {
+
+    color: var(--orange);
+
+    font-size: 18px;
+
+    margin-top: 24px;
+
+    margin-bottom: 12px;
+
+}
+
+.modal-body p {
+
+    color: var(--platinum);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================
+   20. FOOTER
+   ========================================== */
+
+footer {
+
+    padding: 26px 0;
+
+    background-color: var(--black);
+
+    border-top: 1px solid var(--border);
+
+    font-family: var(--font-mono);
+
+    font-size: 11px;
+
+    color: var(--platinum);
+
+}
+
+
+/* ==========================================
+   21. TABLET RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 991px) {
+
+    .nav-link {
+
+        margin-left: 0;
+
+        padding: 10px 0;
+
+    }
+
+    #home {
+
+        min-height: auto;
+
+        padding: 80px 0;
+
+    }
+
+    .terminal {
+
+        max-width: 620px;
+
+    }
+
+    .about-description {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+/* ==========================================
+   22. MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 576px) {
+
+    section {
+
+        padding: 60px 0;
+
+    }
+
+    section h2 {
+
+        font-size: 29px;
+
+    }
+
+    .navbar {
+
+        padding: 10px 0;
+
+    }
+
+    #home {
+
+        padding: 65px 0;
+
+    }
+
+    #home h1 {
+
+        font-size: 40px;
+
+        letter-spacing: -1.5px;
+
+    }
+
+    .hero-description {
+
+        font-size: 15px;
+
+    }
+
+    .terminal pre {
+
+        padding: 18px;
+
+        min-height: 360px;
+
+        font-size: 11px;
+
+    }
+
+    .panel {
+
+        padding: 22px;
+
+    }
+
+    .panel h3 {
+
+        font-size: 19px;
+
+    }
+
+    .about-description p {
+
+        font-size: 15px;
+
+    }
+
+    .timeline {
+
+        padding-left: 20px;
+
+    }
+
+    .timeline article::before {
+
+        left: -30px;
+
+    }
+
+    .timeline h3 {
+
+        font-size: 19px;
+
+    }
+
+    .timeline h4 {
+
+        font-size: 14px;
+
+    }
+
+    .tags span {
+
+        font-size: 10px;
+
+    }
+
+    #contact {
+
+        padding: 70px 0;
+
+    }
+
+    .contact-description {
+
+        font-size: 15px;
+
+    }
+
+    #contact-links .btn {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+    .contact-email {
+
+        font-size: 12px;
+
+    }
+
+    .modal-body {
+
+        padding: 20px;
+
+    }
+
+    footer .container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ==========================================
+   23. ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+    .panel:hover,
+    .highlight-card:hover,
+    .btn-primary:hover,
+    .social-links a:hover {
+
+        transform: none;
+
+    }
+
+}
